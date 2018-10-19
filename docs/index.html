@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Web based File Manager in PHP, Manage your files efficiently and easily with Tiny File Manager">
+    <meta name="author" content="CCP Programmers">
+    <meta name="keywords" content="tiny file manager documents">
+
+    <title>Tiny File Manager | Help Documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+</head>
+<body>
+    <div id="wrapper">
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>Tiny File Manager</h1>
+                            <p class="lead">Web based File Manager in PHP, Manage your files efficiently and easily with Tiny File Manager</p>
+                            <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" class="btn btn-outline-primary">GitHub</a> &nbsp;
+                            <a href="https://github.com/prasathmani/tinyfilemanager/archive/master.zip" target="_blank" class="btn btn-outline-info">Download</a>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav id="navbar-example3" class="navbar navbar-light bg-white" role="navigation">
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link active" href="#line1">Introduction</a>
+                            <a class="nav-link" href="#line2">Getting Started</a>
+                            <a class="nav-link" href="#line3">User Management</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ml-3 my-1" href="#line3-1">Readonly users</a>
+                                <a class="nav-link ml-3 my-1" href="#line3-2">User Directories</a>
+                            </nav>
+                            <a class="nav-link" href="#line4">Exclude Files</a>
+                            <a class="nav-link" href="#line5">Config Flags</a>
+                        </nav>
+                    </nav>
+                </div>
+                <div class="col-md-9"  data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+                    <section class="welcome" id="#line1">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Introduction<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Item Name : </strong>Tiny File Manager</li>
+                                                <li><strong>Item Version : </strong> v 2.1.0</li>
+                                                <li><strong>Author  : </strong> <a href="http://github.com/prasathmani" target="_blank">Prasath Mani</a></li>
+                                                <li><strong>Issues : </strong> <a href="https://github.com/prasathmani/tinyfilemanager/issues" target="_blank">Issues</a></li>
+                                                <li><strong>License : </strong> <a href="https://github.com/prasathmani/tinyfilemanager/blob/master/LICENSE" target="_blank">GNU License</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+
+                                            <p>This documentation is to help you regarding each step of Installation. Please go through the documentation carefully to understand how this is made and how to configure this properly. Basic PHP knowledge is required to customize this Application. You may learn basics <a href="http://www.w3schools.com/" target="_blank">here</a>. </p>
+
+                                            <h4>Requirements</h4>
+                                            <p>It is a simple, fast and small file manager with single php file. It is also a web code editor. It'll run either online or locally, on Linux, Windows or Mac based platforms. The only requirement is to have PHP 5.5+ available.</p>
+                                            <ol>
+                                                <li>PHP 5.5.0 or higher.</li>
+                                                <li><a href="http://php.net/manual/en/book.zip.php" target="_blank">Zip extension</a> for zip and unzip actions.</li>
+                                                <li>Fileinfo, iconv and mbstring extensions are strongly recommended.</li>
+                                            </ol>
+                                            <div class="alert alert-danger">
+                                                Be careful while editing the file manager. If not edited properly, the application may break completely.
+                                                    <br> No support is provided for faulty customization. check issues or create new one <a href="https://github.com/prasathmani/tinyfilemanager/issues" target="_blank">here</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line2" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Getting Started <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>This is the fastest way to beginners to start using Tiny File Browser</p>
+
+                                <ol>
+                                    <li>Download <a href="https://github.com/prasathmani/tinyfilemanager/archive/master.zip" target="_blank">ZIP</a> with latest version from master branch.</li>
+                                    <li>Copy tinyfilemanager.php to your website folder and open it with web browser <code>(e.g. http://yoursite/any_path/tinyfilemanager.php)</code>.</li>
+                                </ol>
+
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line3" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">User Management<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div>
+                            <p>You only need to open it and use the following credentials (you should change them!) <br>
+                                Admin user: <strong>admin/admin</strong> <br> Normal user: <strong>user/12345</strong></p>
+                                                            <pre>
+<code class="language-php">
+// Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
+$auth_users = array(
+    'admin' => password_hash('admin', PASSWORD_DEFAULT),
+    'user' => password_hash('12345', PASSWORD_DEFAULT),
+    'guest' => password_hash('guest', PASSWORD_DEFAULT)
+);
+</code>
+                                </pre>
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            Warning: Please set your own username and password in <code>$auth_users</code> before use.
+                        </div>
+
+                        <p>To enable/disable authentication set <code>$auth_users</code> to true or false.
+                            <pre>
+<code class="language-php">
+// Auth with login/password (set true/false to enable/disable it)
+$use_auth = true; //change to false to disable the authentication
+</code>
+                    </pre>
+                        </p>
+
+                        <hr>
+
+                        <h4 id="line3-1"> Readonly users</h4>
+
+                        <p>Set user role as readonly permission and thay don't have permission to create, edit, delete and upload files</p>
+                       <pre>
+<code class="language-php">
+// Readonly users (usernames array)
+$readonly_users = array(
+    'user',
+    'user1',
+    'guest'
+);
+</code>
+                       </pre>
+                        <hr>
+
+                        <h4 id="line3-2">User Specific Directories</h4>
+                        <p>Assign specific directories to each user</p>
+                        <pre>
+<code class="language-php">
+//array('Username' => 'Directory path', 'Username2' => 'Directory path', ...)
+$directories_users = array(
+    'admin' => 'root',
+    'user' => 'root/user-folder',
+    'guest' => 'root/guest/temp'
+);
+</code>
+                        </pre>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line4" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Exclude Files & Folders <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+
+                        <p>Configured files and folders will be excluded from the listing, incase same file/folder in multiple place also excluded </p>
+
+<pre>
+<code class="language-php">
+//Array of files and folders excluded from listing
+$GLOBALS['exclude_items'] = array(
+    'my-folder',
+    'secret-files',
+    'tinyfilemanger.php',
+    'config.php'
+);
+</code>
+</pre>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line5"  class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Config Flags <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <ul>
+                                    <li><code>FM_ROOT_PATH</code> - default is $_SERVER['DOCUMENT_ROOT']</li>
+                                    <li><code>FM_ROOT_URL</code> - default is 'http(s)://site.domain/'</li>
+                                    <li><code>FM_SELF_URL</code> - default is 'http(s)://site.domain/' . $_SERVER['PHP_SELF']</li>
+                                    <li><code>FM_ICONV_INPUT_ENC</code> - default is 'CP1251'</li>
+                                    <li><code>FM_USE_HIGHLIGHTJS</code> - default is true </li>
+                                    <li><code>FM_HIGHLIGHTJS_STYLE</code> - default is 'vs' </li>
+                                    <li><code>FM_DATETIME_FORMAT</code> - default is 'd.m.y H:i' </li>
+                                    <li><code>FM_EXTENSION</code> - default is "" //upload files extensions </li>
+                                </ul>
+                            </div>
+                            <!-- end col -->
+
+
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+
+                    <!-- end section -->
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+</html>
