@@ -50,11 +50,13 @@
                             <a class="nav-link" href="#line2">Getting Started</a>
                             <a class="nav-link" href="#line3">User Management</a>
                             <nav class="nav nav-pills flex-column">
-                                <a class="nav-link ml-3 my-1" href="#line3-1">Readonly users</a>
-                                <a class="nav-link ml-3 my-1" href="#line3-2">User Directories</a>
+                                <a class="nav-link ml-3 my-1" href="#line3-1">Password</a>
+                                <a class="nav-link ml-3 my-1" href="#line3-2">Readonly users</a>
+                                <a class="nav-link ml-3 my-1" href="#line3-3">User Directories</a>
                             </nav>
                             <a class="nav-link" href="#line4">Exclude Files</a>
-                            <a class="nav-link" href="#line5">Config Flags</a>
+                            <a class="nav-link" href="#line5">Embedding</a>
+                            <a class="nav-link" href="#line6">Config Flags</a>
                         </nav>
                     </nav>
                 </div>
@@ -147,9 +149,9 @@
 <code class="language-php">
 // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
 $auth_users = array(
-    'admin' => password_hash('admin', PASSWORD_DEFAULT),
-    'user' => password_hash('12345', PASSWORD_DEFAULT),
-    'guest' => password_hash('guest', PASSWORD_DEFAULT)
+    'admin' => '$2y$10$axZWlisI..n9xmULN4gbhectUdOpu0z64xb9ysycHQ5ubKYcEY5sW', //admin
+    'user' => '$2y$10$.mwmDmZH2003EjFobn86QuU3kr6NAmUYAaMVWQdLXYkirie7EJxj6', //12345
+    'guest' => '$2y$10$a.DMI5sRjAnvhb.8rFAXY.XPSEO/eatVb4qCMmTc2YcxTDKp9xMyC' //guest
 );
 </code>
                                 </pre>
@@ -169,7 +171,30 @@ $use_auth = true; //change to false to disable the authentication
 
                         <hr>
 
-                        <h4 id="line3-1"> Readonly users</h4>
+                        <h4 id="line3-1"> Password</h4>
+
+                        <p>Generate secure password using PHP <code>password_hash()</code> <a href="pwd.html" target="_blank" class="btn btn-outline-secondary">password generator</a></p>
+
+                        <pre>
+<code class="language-php">
+$auth_users = array(
+    'username' => 'REPLACE YOUR GENERATED PASSWORD HERE'
+);
+</code>
+                       </pre>
+                        <p>If not able to generate password or facing any issue use alternative password generator <a href="http://www.passwordtool.hu/php5-password-hash-generator" target="_blank">here</a></p>
+                        <p>or you can use directly password hash in tinyfilemanager it self</p>
+
+                        <pre>
+<code class="language-php">
+$auth_users = array(
+    'username' => password_hash('password here', PASSWORD_DEFAULT)
+);
+</code>
+                       </pre>
+                        <hr>
+
+                        <h4 id="line3-2"> Readonly users</h4>
 
                         <p>Set user role as readonly permission and thay don't have permission to create, edit, delete and upload files</p>
                        <pre>
@@ -184,7 +209,7 @@ $readonly_users = array(
                        </pre>
                         <hr>
 
-                        <h4 id="line3-2">User Specific Directories</h4>
+                        <h4 id="line3-3">User Specific Directories</h4>
                         <p>Assign specific directories to each user</p>
                         <pre>
 <code class="language-php">
@@ -228,7 +253,37 @@ $GLOBALS['exclude_items'] = array(
                     </section>
                     <!-- end section -->
 
-                    <section id="line5"  class="section">
+                    <section id="line5" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Embedding <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+
+                        <p>Include file manager in another script. Just define <code>FM_EMBED</code> and other necessary constants.</p>
+
+                        <pre>
+<code class="language-php">
+class SomeController
+{
+    public function actionIndex()
+    {
+        define('FM_EMBED', true);
+        define('FM_SELF_URL', UrlHelper::currentUrl()); // must be set if URL to manager not equal PHP_SELF
+        require 'path/to/tinyfilemanager.php';
+    }
+}
+</code>
+</pre>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line6"  class="section">
 
                         <div class="row">
                             <div class="col-md-12 left-align">
