@@ -301,10 +301,19 @@ class SomeController
                                     <li><code>FM_ROOT_URL</code> - default is 'http(s)://site.domain/'</li>
                                     <li><code>FM_SELF_URL</code> - default is 'http(s)://site.domain/' . $_SERVER['PHP_SELF']</li>
                                     <li><code>FM_ICONV_INPUT_ENC</code> - default is 'CP1251'</li>
-                                    <li><code>FM_USE_HIGHLIGHTJS</code> - default is true </li>
+                                    <li>
+                                        <code>FM_USE_HIGHLIGHTJS</code> - default is true;
+                                        <i>Enable/Disable the code highlight</i>
+                                    </li>
                                     <li><code>FM_HIGHLIGHTJS_STYLE</code> - default is 'vs' </li>
                                     <li><code>FM_DATETIME_FORMAT</code> - default is 'd.m.y H:i' </li>
-                                    <li><code>FM_EXTENSION</code> - default is "" //upload files extensions </li>
+                                    <li>
+                                        <code>FM_EXTENSION</code> - default is "";
+                                        <i>Configure allowed file extensions to upload .i.e: <code>'jpg,png,pdf,gif,html,css,js'</code></i>
+                                    </li>
+                                    <li><code>show_hidden_files</code> - default is false; Show or hide files and folders that starts with a dot</li>
+                                    <li><code>$edit_files</code> - default is true; Enable ace.js (https://ace.c9.io/) on view's page</li>
+                                    <li><code>$GLOBALS['online_viewer']</code> - default is true; Google Docs Viewer to view all kinds of office file formats</li>
                                 </ul>
                             </div>
                             <!-- end col -->
