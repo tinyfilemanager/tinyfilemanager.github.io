@@ -7,102 +7,131 @@
     <meta name="author" content="CCP Programmers">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex">
-    <title>PHP5 PASSWORD HASH GENERATOR</title>
+    <title>TINY PHP5 PASSWORD HASH GENERATOR</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
-        .form-signin {
-            width: 100%;
-            max-width: 330px;
-            padding: 15px;
-            margin: 0 auto;
-        }
-        .form-signin .checkbox {
-            font-weight: 400;
-        }
-        .form-signin .form-control {
-            position: relative;
-            box-sizing: border-box;
-            height: auto;
+        .code {
+            background: #e8e8e8;
+            border-radius: 5px;
             padding: 10px;
-            font-size: 16px;
-        }
-        .form-signin .form-control:focus {
-            z-index: 2;
-        }
-        .form-signin input[type="email"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-        .form-signin input[type="password"] {
             margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
         }
-        .message {
-            padding: 4px 7px;
-            border: 1px solid #ddd;
-            background-color: #fff
-        }
-
-        .message.ok {
-            border-color: green;
-            color: green
-        }
-
-        .message.error {
-            border-color: red;
-            color: red
-        }
-
-        .message.alert {
-            border-color: orange;
-            color: orange
+        pre { margin: 0}
+        .form-control:focus {
+            border-color: #28a745;
+            box-shadow: none;
         }
     </style>
 </head>
-<body style="background-color: #f5f5f5;">
+<body class="bg-secondary">
 <div id="wrapper" class="container-fluid">
 
-    <div class="text-center">
-        <form class="form-signin" action="" method="post" autocomplete="off">
-            <h1 class="h3 mb-3 font-weight-normal">TINY FILE MANAGER</h1>
-            <p>PHP5 PASSWORD HASH GENERATOR</p>
-            <label for="fm_pwd" class="sr-only">Password</label>
-            <input type="text" id="fm_pwd" name="fm_pwd" class="form-control mt-2" placeholder="Password" required="">
-            <button class="btn btn-lg btn-primary btn-block mt-4 mb-4" type="submit">GENERATE</button>
-            <label for="resultarea">PASSWORD HASH</label>
-            <textarea class="form-control" rows="3" id="resultarea" readonly></textarea>
-        </form>
-    </div>
+    <section>
 
-</div>
-<div class="container">
-    <p>i.e.</p>
-    <div class="alert alert-danger" role="alert">
-            <pre>
-<code>
-$auth_users = array(
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+
+                <div class="card mt-4 mb-2">
+                    <h5 class="card-header">TINY FILE MANAGER</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">PHP5 PASSWORD HASH GENERATOR</h5>
+                        <p class="card-text">PHP5 password_hash() is a predefined (built in) function on php 5.5 and above. Verifiable with password_verify() but non reversable.</p>
+
+                        <form class="form-signin" action="" method="post" autocomplete="off">
+                            <div class="form-row align-items-center">
+                                <div class="col-sm-8 my-1">
+                                    <label class="sr-only" for="fm_pwd">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Password</div>
+                                        </div>
+                                        <input type="text" class="form-control" id="fm_pwd" name="fm_pwd" placeholder="Enter your password" required>
+                                    </div>
+                                </div>
+                                <div class="col-auto my-1">
+                                    <button type="submit" class="btn btn-success">GENERATE</button>
+                                </div>
+
+                                <div class="col-10 mt-3">
+                                    <div class="form-group">
+                                        <label for="resultarea">PASSWORD HASH</label>
+                                        <textarea type="text" class="form-control" rows="3" id="resultarea" readonly></textarea>
+                                        <a href="#/resultarea" id="copy-hash">Copy</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <div class="card mt-4 mb-2">
+                    <h5 class="card-header">HOW TO USE</h5>
+                    <div class="card-body">
+                    <div class="code" role="alert">
+<pre><code>$auth_users = array(
     'username' => 'REPLACE YOUR GENERATED PASSWORD HERE'
 );
-</code>
-            </pre>
-    </div>
-    <p>If not able to generate password or facing any issue use alternative password generator <a href="http://www.passwordtool.hu/php5-password-hash-generator" target="_blank">here</a></p>
-    <p>or you can use directly password has in tinyfilemanager it self</p>
-    <div class="alert alert-warning" role="alert">
-    <pre>
-<code>
-$auth_users = array(
+</code></pre>
+                    </div>
+                    <p>If not able to generate password or facing any issue, than generate password using tinyfilemanager itsef on  tinyfilemanager > settings > Generate new password hash or alternative password <a href="http://www.passwordtool.hu/php5-password-hash-generator" target="_blank" class="text-primary">generator here</a></p>
+                    <p>or you can use directly use password in tinyfilemanager it self</p>
+                    <div class="code" role="alert">
+<pre><code>$auth_users = array(
     'username' => password_hash('password here', PASSWORD_DEFAULT)
 );
-</code>
-</pre>
+</code></pre>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mt-5 text-center text-white">
+        &mdash;&mdash; &copy; <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" class="text-white"> Tiny File Manager</a> &mdash;&mdash;
     </div>
+
+
 </div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
+
+    function copyToClipboard(text) {
+        if (window.clipboardData && window.clipboardData.setData) {
+            return clipboardData.setData("Text", text);
+
+        } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+            var textarea = document.createElement("textarea");
+            textarea.textContent = text;
+            textarea.style.position = "fixed";
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                return document.execCommand("copy");
+            } catch (ex) {
+                console.warn("Copy to clipboard failed.", ex);
+                return false;
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+    }
+
+    $("a#copy-hash").on("click", function (e) {
+        e.preventDefault();
+        var data = $("#resultarea").val();
+        if(!!data) {
+            copyToClipboard(data);
+        }
+    });
+
     $('.form-signin').on('submit', function (e) {
         e.preventDefault();
         $("#resultarea").val('');
