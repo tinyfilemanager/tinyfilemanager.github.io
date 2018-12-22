@@ -54,7 +54,7 @@
 
                                 <div class="col-10 mt-3">
                                     <div class="form-group">
-                                        <label for="resultarea">PASSWORD HASH</label>
+                                        <label for="resultarea">PASSWORD HASH <img src="../img/30.gif" id="loading-image" class="d-none"></label>
                                         <textarea type="text" class="form-control" rows="3" id="resultarea" readonly></textarea>
                                         <a href="#/resultarea" id="copy-hash">Copy</a>
                                     </div>
@@ -79,7 +79,7 @@
 </code></pre>
                     </div>
                     <p>If not able to generate password or facing any issue, than generate password using tinyfilemanager itsef on  tinyfilemanager > settings > Generate new password hash or alternative password <a href="http://www.passwordtool.hu/php5-password-hash-generator" target="_blank" class="text-primary">generator here</a></p>
-                    <p>or you can use directly use password in tinyfilemanager it self</p>
+                    <p>or you can use directly use password with hash in <code>$auth_users</code></p>
                     <div class="code" role="alert">
 <pre><code>$auth_users = array(
     'username' => password_hash('password here', PASSWORD_DEFAULT)
@@ -143,8 +143,15 @@
                 data: 'pwd='+pwd,
                 dataType: 'jsonp',
                 cache: false,
+                beforeSend: function() {
+                    $("#loading-image").removeClass('d-none');
+                },
                 success: function(data){
+                    $("#loading-image").addClass('d-none');
                     $("#resultarea").val(data);
+                },
+                error : function(){
+                    $("#loading-image").addClass('d-none');
                 }
             });
         }

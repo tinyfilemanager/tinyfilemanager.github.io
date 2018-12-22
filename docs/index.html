@@ -57,7 +57,8 @@
                             </nav>
                             <a class="nav-link" href="#line4">Exclude Files</a>
                             <a class="nav-link" href="#line5">Embedding</a>
-                            <a class="nav-link" href="#line6">Config Flags</a>
+                            <a class="nav-link" href="#line6">Settings</a>
+                            <a class="nav-link" href="#line7">Config Flags</a>
                         </nav>
                     </nav>
                 </div>
@@ -280,11 +281,43 @@ class SomeController
 }
 </code>
 </pre>
+OR
+<pre><code class="language-php">
+define('FM_EMBED', true);
+define('FM_SELF_URL', $_SERVER['PHP_SELF']);
+require 'path/tinyfilemanager.php';
+</code></pre>
+                        <p>Embeding tiny file manager with bootstrap 4, <a href="https://tinyfilemanager.eu-gb.mybluemix.net/Demo/embed/" target="_blank">Demo here</a></p>
+                        <img src="../img/tiny-file-manager-embed.png" class="img-fluid" alt="Tiny File Manager Embed with Bootstrap">
 
                     </section>
                     <!-- end section -->
 
                     <section id="line6"  class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Settings <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Configure language, Error Reporting and Show Hidden Files on settings page</p>
+                                <img src="../img/tiny-file-manager-settings.PNG" class="img-fluid"  alt="Tiny File manager Settings">
+                            </div>
+                            <!-- end col -->
+
+
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line7"  class="section">
 
                         <div class="row">
                             <div class="col-md-12 left-align">
@@ -313,6 +346,7 @@ class SomeController
                                     </li>
                                     <li><code>show_hidden_files</code> - default is false; Show or hide files and folders that starts with a dot</li>
                                     <li><code>$edit_files</code> - default is true; Enable ace.js (https://ace.c9.io/) on view's page</li>
+                                    <li><code>$sticky_navbar</code> - default is true; Enable/Disable fixed navigation top bar</li>
                                     <li><code>$GLOBALS['online_viewer']</code> - default is true; Google Docs Viewer to view all kinds of office file formats</li>
                                 </ul>
                             </div>
