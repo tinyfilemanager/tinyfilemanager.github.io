@@ -9,7 +9,7 @@
     "Undo (Ctrl + Z)",
     "Redo (Ctrl + Y)",
     "Go to Line (Ctrl + L)",
-    "More - https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts"
+    "<a href='https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts' target='_blank'>More Shortcuts</a>"
   ],
   "aceTheme": {
     "bright": {
@@ -55,6 +55,7 @@
     }
   },
   "aceMode": {
+    "javascript": "JavaScript",
     "abap": "ABAP",
     "abc": "ABC",
     "actionscript": "ActionScript",
@@ -119,7 +120,6 @@
     "jack": "Jack",
     "jade": "Jade",
     "java": "Java",
-    "javascript": "JavaScript",
     "json": "JSON",
     "jsoniq": "JSONiq",
     "jsp": "JSP",
@@ -209,5 +209,62 @@
     "xquery": "XQuery",
     "yaml": "YAML",
     "django": "Django"
+  },
+  "language": {
+    "ru": {
+      "AppName": "Файловый менеджер",
+      "AppTitle": "Файловый менеджер",
+      "Login": "Войти",
+      "Username": "Пользователь",
+      "Password": "Пароль",
+      "Logout": "Выйти",
+      "Move": "Переместить",
+      "Copy": "Копировать",
+      "Save": "Сохранить",
+      "SelectAll": "Выбрать всё",
+      "UnSelectAll": "Отменить выбор",
+      "File": "Файл",
+      "Back": "Вернуться",
+      "Size": "Размер",
+      "Perms": "Права доступа",
+      "Modified": "Обновление",
+      "Owner": "Создатель",
+      "Search": "Поиск",
+      "NewItem": "Создать",
+      "Folder": "Папка",
+      "Delete": "Удалить",
+      "Rename": "Переименовать",
+      "CopyTo": "Скопировать в",
+      "DirectLink": "Ссылка",
+      "UploadingFiles": "Загрузка файлов",
+      "ChangePermissions": "Изменить права",
+      "Copying": "Копировать",
+      "CreateNewItem": "Создать новый",
+      "Name": "Имя",
+      "AdvancedEditor": "Улучшеный редактор",
+      "RememberMe": "Запомнить меня",
+      "Actions": "Действия",
+      "Upload": "Загрузить",
+      "Cancel": "Отмена",
+      "InvertSelection": "Обратная выборка",
+      "DestinationFolder": "Папка назначения",
+      "ItemType": "Тип элемента",
+      "ItemName": "Имя элемента",
+      "CreateNow": "Создать сейчас",
+      "Download": "Загрузка",
+      "Open": "Открыть",
+      "UnZip": "Разархивировать",
+      "UnZipToFolder": "Разархивировать в папку",
+      "Edit": "Редактировать",
+      "NormalEditor": "Стандартный редактор",
+      "BackUp": "Back Up",
+      "SourceFolder": "Путь папки",
+      "Files": "Файлы",
+      "Change": "Изменения",
+      "Settings": "Свойства",
+      "Language": "Язык",
+      "MemoryUsed": "Используемая память",
+      "PartitionSize": "Размер раздела"
+    }
   }
 }
