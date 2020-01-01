@@ -26,6 +26,9 @@
                         <div class="big-title text-center">
                             <h1>Tiny File Manager</h1>
                             <p class="lead">Web based File Manager in PHP, Manage your files efficiently and easily with Tiny File Manager</p>
+                            <p>
+                                It is web based file manager and it is a simple, fast and small file manager with a single file, multi-language ready web application for storing, editing and managing files and folders online via web browser. The Application runs on PHP 5.5+, a build-in support for managing text files with cloud9 IDE and it supports syntax highlighting for over 150+ languages and over 35+ themes. .
+                            </p>
                             <a href="https://tinyfilemanager.github.io" class="btn btn-outline-dark">Home</a> &nbsp;
                             <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" class="btn btn-outline-primary">GitHub</a> &nbsp;
                             <a href="https://tinyfilemanager.github.io/demo/" target="_blank" class="btn btn-outline-success">Demo</a> &nbsp;
@@ -74,7 +77,7 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Item Name : </strong>Tiny File Manager</li>
-                                                <li><strong>Item Version : </strong> v 2.2.0</li>
+                                                <li><strong>Item Version : </strong> v 2.4.0</li>
                                                 <li><strong>Author  : </strong> <a href="http://github.com/prasathmani" target="_blank">Prasath Mani</a></li>
                                                 <li><strong>Issues : </strong> <a href="https://github.com/prasathmani/tinyfilemanager/issues" target="_blank">Issues</a></li>
                                                 <li><strong>License : </strong> <a href="https://github.com/prasathmani/tinyfilemanager/blob/master/LICENSE" target="_blank">GNU License</a></li>
@@ -243,11 +246,12 @@ $directories_users = array(
 <pre>
 <code class="language-php">
 //Array of files and folders excluded from listing
-$GLOBALS['exclude_items'] = array(
+$exclude_items = array(
     'my-folder',
     'secret-files',
     'tinyfilemanger.php',
-    'config.php'
+    '*.php',
+    '*.js'
 );
 </code>
 </pre>
@@ -347,7 +351,7 @@ require 'path/tinyfilemanager.php';
                                     <li><code>show_hidden_files</code> - default is false; Show or hide files and folders that starts with a dot</li>
                                     <li><code>$edit_files</code> - default is true; Enable ace.js (https://ace.c9.io/) on view's page</li>
                                     <li><code>$sticky_navbar</code> - default is true; Enable/Disable fixed navigation top bar</li>
-                                    <li><code>$GLOBALS['online_viewer']</code> - default is true; Google Docs Viewer to view all kinds of office file formats</li>
+                                    <li><code>$online_viewer</code> - default is true; Google Docs Viewer to view all kinds of office file formats</li>
                                 </ul>
                             </div>
                             <!-- end col -->
@@ -379,8 +383,6 @@ require 'path/tinyfilemanager.php';
 
     <!-- CUSTOM PLUGINS -->
     <script src="js/main.js"></script>
-
-
 
 </body>
 </html>
