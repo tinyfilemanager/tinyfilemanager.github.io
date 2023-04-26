@@ -95,6 +95,11 @@ $online_viewer = 'google';
 // false => disable sticky header
 $sticky_navbar = true;
 
+// Path display mode when viewing file information
+// 'full' => show full path
+// 'relative' => show path relative to root_path
+// 'host' => show path on the host
+$path_display_mode = 'full';
 
 // max upload file size
 $max_upload_size_bytes = 5000;
